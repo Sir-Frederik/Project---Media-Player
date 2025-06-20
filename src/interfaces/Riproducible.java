@@ -10,17 +10,18 @@ public interface Riproducible {
 
 
 
-    public int reduceVolume(int volume);
+    public void reduceVolume();
 
 
 
-    public int increaseVolume(int volume);
+    public void increaseVolume();
 
 
 
-    int MaxVolume =10;
-    int MinVolume =0;
-    int MaxDuration =15;
-    int MinDuration =0;
+
+    int maxVolume =10;
+    int minVolume =0;
+    int maxDuration =15;
+    int minDuration =0;
 
 }

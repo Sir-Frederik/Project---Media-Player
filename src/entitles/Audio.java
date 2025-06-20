@@ -11,10 +11,10 @@ private int volume;
 
  public Audio(String title, int duration, int volume){
     super(title);
-    if (duration <= MaxDuration && duration >= MinDuration){
+    if (duration <= maxDuration && duration >= minDuration){
         this.duration = duration;
     };
-    if (volume <= MaxVolume && volume >= MinVolume) {
+    if (volume <= maxVolume && volume >= minVolume) {
         this.volume = volume;
     };
 
@@ -22,27 +22,31 @@ private int volume;
 
     @Override
     public void play() {
-        System.out.println("Sto riproducendo il brano  musicale " + title);
+        System.out.println("Sto riproducendo il brano  musicale: " + title);
 
         do {
             System.out.print(title + " ");
-        for(int i =0; i <= volume; i++) {
+        for(int i =0; i < volume; i++) {
                 System.out.print("!");
 
             };
             duration --;
             System.out.println();
-        }while(duration > MinDuration);
+        }while(duration > minDuration);
     }
 
     @Override
-    public int reduceVolume(int volume) {
-        return 0;
+    public void reduceVolume() {
+        if (volume > minVolume) {
+            volume--;
+        }
     }
 
     @Override
-    public int increaseVolume(int volume) {
-        return 0;
+    public void increaseVolume() {
+        if (volume < maxVolume) {
+            volume++;
+        }
     }
 
 
@@ -64,7 +68,7 @@ private int volume;
     }
 
     public void setVolume(int volume) {
-        if (volume <= MaxVolume && volume >= MinVolume) {
+        if (volume <= maxVolume && volume >= minVolume) {
             this.volume = volume;
         };
     }

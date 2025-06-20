@@ -1,11 +1,18 @@
 import entitles.Audio;
+import entitles.Image;
+import entitles.Video;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
-        /*Audio audio1 = new Audio("Come Mai", 3, 5);
-        audio1.toString();
-        audio1.play(); */
+   /*     Audio audio1 = new Audio("Come Mai", 3, 5);
+        System.out.println(        audio1.toString());
+        audio1.play();
+        Video video1 = new Video("Avventura Spaziale", 10,2,5 );
+        System.out.println(video1.toString());
+       video1.play();*/
+        Image image1 = new Image("Immagina, puoi", 3);
+        image1.show();
+
     }
 }
