@@ -42,8 +42,39 @@ public class Main {
                 default:
                     System.out.println("Quindi hai scelto:  Nulla.");
                     System.out.println("Non sono arrabbiato, sono solo deluso.");
-                    break;
+                    System.exit(0);
             }
+            System.out.println("La tua playlist è pronta!");
+            System.out.println("Cosa vuoi riprodurre? digita un numero da 1 a 5. premi 0 per interrompere tutto.");
+             chosen = scanner.nextInt();
+            /*switch (chosen) {
+                case 1:
+                    playlist[0].play();
+
+
+                    break;
+                case 2:
+                    playlist[1]
+
+                    break;
+                case 3:
+                    playlist[2]
+
+                    break;
+                    case 4:
+                    playlist[3]
+
+                    break;
+                    case 5:
+                    playlist[4]
+
+                    break;
+                case 0:
+                    System.out.println("Addio! E' stato un piacere");
+
+                    System.exit(0);
+            }*/
+
         }
 
 
