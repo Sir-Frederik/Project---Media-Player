@@ -1,5 +1,6 @@
 import entitles.Audio;
 import entitles.Image;
+import entitles.MultimediaElement;
 import entitles.Video;
 
 import java.util.Scanner;
@@ -16,24 +17,33 @@ public class Main {
         /*Image image1 = new Image("Immagina, puoi", 3);
         image1.show();*/
         Scanner scanner = new Scanner(System.in);
-        
+        MultimediaElement[] playlist = new MultimediaElement[5];
         System.out.println("Ciao, dimmi cosa inserire nel lettore multimediale");
-        System.out.println("Digita 1 per inserire una immagine, 2 per un Audio e 3 per un Video");
-        int chosen = scanner.nextInt();
-        switch (chosen) {
-            case 1:
-                newImage().toString();
-                break;
-            case 2:
-                newAudio();
-                break;
-            case 3:
-                newVideo();
-                break;
-            default:
-                System.out.println("Quindi hai scelto:  Nulla.");
-                System.out.println("Non sono arrabbiato, sono solo deluso.");
-                break;
+        System.out.println("Inseriremo 5 elementi.");
+        ;
+        for (int i = 0; i <= playlist.length-1; i++){
+            System.out.println("Posizione "+( i+1) + " della playlist:");
+            System.out.println("Digita 1 per inserire una immagine, 2 per un Audio e 3 per un Video");
+            int chosen = scanner.nextInt();
+            switch (chosen) {
+                case 1:
+                    playlist[i] = newImage();
+                    System.out.println("Immagine inserita correttamente!");
+
+                    break;
+                case 2:
+                    playlist[i] = newAudio();
+                    System.out.println("Audio inserito correttamente!");
+                    break;
+                case 3:
+                    playlist[i] = newVideo();
+                    System.out.println("Video inserito correttamente");
+                    break;
+                default:
+                    System.out.println("Quindi hai scelto:  Nulla.");
+                    System.out.println("Non sono arrabbiato, sono solo deluso.");
+                    break;
+            }
         }
 
 
