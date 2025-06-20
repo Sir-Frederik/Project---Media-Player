@@ -44,9 +44,15 @@ public class Main {
                     System.out.println("Non sono arrabbiato, sono solo deluso.");
                     System.exit(0);
             }
-            System.out.println("La tua playlist è pronta!");
+        }
+
+            System.out.println("La tua playlist è pronta! Essa contiene:");
+        for(int i =0; i<= playlist.length -1; i++){
+            System.out.println(playlist[i].getTitle());
+        }
+
             System.out.println("Cosa vuoi riprodurre? digita un numero da 1 a 5. premi 0 per interrompere tutto.");
-             chosen = scanner.nextInt();
+//             chosen = scanner.nextInt();
             /*switch (chosen) {
                 case 1:
                     playlist[0].play();
@@ -75,7 +81,6 @@ public class Main {
                     System.exit(0);
             }*/
 
-        }
 
 
     }

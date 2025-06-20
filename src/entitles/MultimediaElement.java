@@ -7,5 +7,7 @@ public class MultimediaElement {
         this.title = title;
     }
 
-
+    public String getTitle() {
+        return title;
+    }
 }
