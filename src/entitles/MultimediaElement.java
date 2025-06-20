@@ -1,5 +1,9 @@
 package entitles;
 
 public class MultimediaElement {
-    protected String Title;
+    protected String title;
+
+    public MultimediaElement(String title) {
+        this.title = title;
+    }
 }
