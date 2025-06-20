@@ -23,7 +23,7 @@ public class Main {
         ;
         for (int i = 0; i <= playlist.length-1; i++){
             System.out.println("Posizione "+( i+1) + " della playlist:");
-            System.out.println("Digita 1 per inserire una immagine, 2 per un Audio e 3 per un Video");
+            System.out.println("Digita 1 per inserire una Immagine, 2 per un Audio e 3 per un Video");
             int chosen = scanner.nextInt();
             switch (chosen) {
                 case 1:
@@ -48,38 +48,100 @@ public class Main {
 
             System.out.println("La tua playlist è pronta! Essa contiene:");
         for(int i =0; i<= playlist.length -1; i++){
-            System.out.println(playlist[i].getTitle());
+            System.out.println( (i+1) +")" + playlist[i].getTitle());
         }
 
+         int chosen = -1   ;
+        while (chosen !=0){
             System.out.println("Cosa vuoi riprodurre? digita un numero da 1 a 5. premi 0 per interrompere tutto.");
-//             chosen = scanner.nextInt();
-            /*switch (chosen) {
+            chosen = scanner.nextInt();
+            switch (chosen) {
                 case 1:
-                    playlist[0].play();
+                    if (playlist[0] instanceof Image) {
+                        Image currentImage = (Image) playlist[0];
+
+                        currentImage.show();
+                    } else if (playlist[0] instanceof Video) {
+                        Video currentVideo = (Video) playlist[0];
+                        currentVideo.play();
+                    } else {
+                        Audio currentAudio = (Audio) playlist[0];
+                        currentAudio.play();
+                    }
 
 
                     break;
                 case 2:
-                    playlist[1]
+                    if (playlist[1] instanceof Image) {
+                        Image currentImage = (Image) playlist[1];
+                        currentImage.show();
+
+                    } else if (playlist[1] instanceof Video) {
+                        Video currentVideo = (Video) playlist[1];
+                        currentVideo.play();
+                    } else {
+                        Audio currentAudio = (Audio) playlist[1];
+                        currentAudio.play();
+                    }
 
                     break;
                 case 3:
-                    playlist[2]
+                    if (playlist[2] instanceof Image) {
+                        Image currentImage = (Image) playlist[2];
+                        currentImage.show();
+
+                    } else if (playlist[2] instanceof Video) {
+                        Video currentVideo = (Video) playlist[2];
+                        currentVideo.play();
+                    } else {
+                        Audio currentAudio = (Audio) playlist[2];
+                        currentAudio.play();
+                    }
+
 
                     break;
-                    case 4:
-                    playlist[3]
+                case 4:
+                    if (playlist[3] instanceof Image) {
+                        Image currentImage = (Image) playlist[3];
+                        currentImage.show();
+
+
+                    } else if (playlist[3] instanceof Video) {
+                        Video currentVideo = (Video) playlist[3];
+                        currentVideo.play();
+                    } else {
+                        Audio currentAudio = (Audio) playlist[3];
+                        currentAudio.play();
+                    }
+
 
                     break;
-                    case 5:
-                    playlist[4]
+                case 5:
+                    if (playlist[4] instanceof Image) {
+                        Image currentImage = (Image) playlist[4];
+                        currentImage.show();
+
+                    } else if (playlist[4] instanceof Video) {
+                        Video currentVideo = (Video) playlist[4];
+                        currentVideo.play();
+                    } else {
+                        Audio currentAudio = (Audio) playlist[4];
+                        currentAudio.play();
+                    }
+
 
                     break;
                 case 0:
                     System.out.println("Addio! E' stato un piacere");
 
                     System.exit(0);
-            }*/
+                default:
+                    System.out.println("Scelta non valida");
+
+
+            }
+
+        }
 
 
 
@@ -96,7 +158,7 @@ public class Main {
 
     }    public static Video newVideo(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Video sia! Come la chiamiamo?");
+        System.out.println("Video sia! Come lo chiamiamo?");
         String title = scanner.nextLine();
         System.out.println("Digita un numero da  0 a 15 per impostare la Durata");
         int duration = scanner.nextInt();
@@ -112,7 +174,7 @@ public class Main {
 
      public static Audio newAudio(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Audio sia! LE vogliamo dare un nome?");
+        System.out.println("Audio sia! Gli vogliamo dare un nome?");
         String title = scanner.nextLine();
          System.out.println("Digita un numero da  0 a 15 per impostare la Durata");
          int duration = scanner.nextInt();

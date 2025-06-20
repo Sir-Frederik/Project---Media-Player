@@ -1,6 +1,6 @@
 package entitles;
 
-public class MultimediaElement {
+public abstract class  MultimediaElement {
     protected String title;
 
     public MultimediaElement(String title) {
@@ -10,4 +10,5 @@ public class MultimediaElement {
     public String getTitle() {
         return title;
     }
+
 }
